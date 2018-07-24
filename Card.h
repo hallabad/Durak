@@ -6,11 +6,17 @@ using namespace std;
 class Card
 {
 	public:
-		
+		void setValue(int v){  value=v;
+		};
+		int getValue(){return value;
+		};
+		void setSuit(char s){ suit = s;
+		}
+		char getSuit(){return suit;
+		}
 	private:
-		int cardNumber;
-		string cardSuit;
-		
+		int value;
+		char suit;
 };
 
 #endif

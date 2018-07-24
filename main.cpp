@@ -11,5 +11,6 @@ int main() {
 	magic.setValue(11);
 	
 	cout << magic.getValue();
+	cout << magic.getSuit();
 	return 0;
 }

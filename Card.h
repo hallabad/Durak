@@ -14,6 +14,14 @@ class Card
 		}
 		char getSuit(){return suit;
 		}
+		Card(int v, char s){
+			value=v;
+			suit=s;
+		}
+		Card(){
+			value=0;
+			suit= 'X';
+		}
 	private:
 		int value;
 		char suit;

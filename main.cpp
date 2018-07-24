@@ -6,11 +6,7 @@ using namespace std;
 
 
 int main() {
-	Card magic;
-	magic.setSuit('H');
-	magic.setValue(11);
-	
-	cout << magic.getValue();
-	cout << magic.getSuit();
+	Deck cards;
+	cards.fillPile();
 	return 0;
 }

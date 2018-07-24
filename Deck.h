@@ -2,6 +2,7 @@
 #define DECK_H
 #include "Card.h"
 #include <vector>
+#include <iostream>
 using namespace std;
 
 class Deck
@@ -9,7 +10,6 @@ class Deck
 	public:
 		Deck();
 		~Deck();
-		
 		fillPile();
 	private:
 		vector<Card> pile;

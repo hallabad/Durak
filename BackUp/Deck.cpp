@@ -11,19 +11,19 @@ Deck::~Deck()
 
 void Deck::fillPile(){
 	for (int i=6; i < 15;i++){
-		pile.push_back(Card(i,"Hearts"));
+		pile.push_back(Card(i,'H'));
 		cout << pile[i-6].getSuit() << pile[i-6].getValue() << endl;
 	}
 	for (int i=6; i < 15;i++){
-		pile.push_back(Card(i,"Diamond"));
+		pile.push_back(Card(i,'D'));
 		cout << pile[i].getSuit() << pile[i-6].getValue() << endl;
 	}
 	for (int i=6; i < 15;i++){
-		pile.push_back(Card(i,"Clubs"));
+		pile.push_back(Card(i,'C'));
 		cout << pile[i+6].getSuit() << pile[i-6].getValue() << endl;
 	}
 	for (int i=6; i < 15;i++){
-		pile.push_back(Card(i,"Spades"));
+		pile.push_back(Card(i,'S'));
 		cout << pile[i+6+6].getSuit() << pile[i-6].getValue() << endl;
 	}
 	cout << "Draw pile Have been filled"<< endl;
@@ -60,7 +60,7 @@ void Deck::Draw(){
 void Deck::getTrumpCard(){
 	trump.setSuit(pile[0].getSuit());
 	trump.setValue(pile[0].getValue());
-	cout << "| " << trump.getValue() << " of " << trump.getSuit() << " |";
+	cout << trump.getValue() << trump.getSuit();
 }
 
 void Deck::playerAttack(){

@@ -27,18 +27,18 @@ class Deck
 		void prtHand(){
 			cout << "Cards in Hand:";
 			for (int i=0; i <playerHand.size(); i++){
-				cout << " | " << setw(2) << left <<playerHand[i].getValue() << " of "<<setw(7) << left << playerHand[i].getSuit() <<" | ";
+				cout << " | " << setw(2) << left <<playerHand[i].getValue() <<setw(1) << left << playerHand[i].getSuit() <<" | ";
 			}
 			cout << "\nCards number :";
 			for (int i=0; i <playerHand.size(); i++){
-				cout << " | " <<setw(6)  <<" "<< i << setw(6) << " " <<" | ";
+				cout << " | " <<setw(3) << i <<" | ";
 			}
 		}
 		void prtTable(){
-			cout <<"==============================================================================================================================="<< endl;
+			cout <<"================================================================================================================="<< endl;
 			cout << "Player played:";
 			for (int i=0; i <userTable.size(); i++){
-				cout << " | " << setw(2) << left << userTable[i].getValue() << " of "<<setw(1) << left << userTable[i].getSuit() <<" | ";
+				cout << " | " << setw(2) << left <<userTable[i].getValue() <<setw(1) << left << userTable[i].getSuit() <<" | ";
 			}
 		}
 		void getTrumpCard();

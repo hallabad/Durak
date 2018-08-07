@@ -10,21 +10,21 @@ class Card
 		};
 		int getValue(){return value;
 		};
-		void setSuit(string s){ suit = s;
+		void setSuit(char s){ suit = s;
 		}
-		string getSuit(){return suit;
+		char getSuit(){return suit;
 		}
-		Card(int v, string s){
+		Card(int v, char s){
 			value=v;
 			suit=s;
 		}
 		Card(){
 			value=0;
-			suit= "X";
+			suit= 'X';
 		}
 	private:
 		int value;
-		string suit;
+		char suit;
 };
 
 #endif

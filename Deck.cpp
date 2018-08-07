@@ -28,6 +28,7 @@ void Deck::fillPile(){
 	}
 	cout << "Draw pile Have been filled"<< endl;
 };
+
 void Deck::shuffle(){
 	random_shuffle ( pile.begin(), pile.end());
 	for (int i= 0; i <36; i++){
@@ -36,6 +37,7 @@ void Deck::shuffle(){
 	cout << "\nDraw pile have been shuffled"<< endl;
 	cout << "PILE SIZE:"<< pile.size() << endl;
 }
+
 void Deck::Draw(){
 	if (playerHand.size()<6){
 		for (int i=0; playerHand.size()<6 ; i++){
@@ -55,3 +57,15 @@ void Deck::Draw(){
 	cout << "PILE SIZE:"<< pile.size() << endl;
 }
 
+Card Deck::select(string userInput){
+	for (int i=0; i < getHand();i++){
+		string cardName="";
+	}
+	return playerHand[0];
+}
+
+void Deck::getTrumpCard(){
+	trump.setSuit(pile[0].getSuit());
+	trump.setValue(pile[0].getValue());
+	cout << trump.getValue() << trump.getSuit();
+}

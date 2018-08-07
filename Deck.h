@@ -6,6 +6,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <algorithm>
+#include <iomanip>
 using namespace std;
 
 class Deck
@@ -19,16 +20,24 @@ class Deck
 		//ACC
 		int getCPU(){return computerHand.size();}
 		int getPile(){return pile.size();}
+		int getHand(){return playerHand.size();
+		}
+		Card select(string);
 		void prtHand(){
 			cout << "Cards in Hand:";
 			for (int i=0; i <playerHand.size(); i++){
-				cout << " | " <<playerHand[i].getSuit() <<playerHand[i].getValue() <<" | ";
+				cout << " | " << setw(2) << left <<playerHand[i].getValue() <<setw(1) << left << playerHand[i].getSuit() <<" | ";
+			}
+			cout << "\nCards number :";
+			for (int i=0; i <playerHand.size(); i++){
+				cout << " | " <<setw(3) << i <<" | ";
 			}
 		}
-		Card getTrumpCard();
+		void getTrumpCard();
 	private:
 		vector<Card> pile;
 		vector<Card> playerHand;
 		vector<Card> computerHand;
+		Card trump;
 };
 #endif

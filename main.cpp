@@ -8,15 +8,24 @@ using namespace std;
 void prtTable(Deck&);
 
 int main() {
+	string userInput="";
 	Deck cards;
+	Card temp;
+	
 	cards.shuffle();
 	cards.Draw();
+	system ("CLS");
 	prtTable(cards);
+	//cin >> userInput;
+	cout << "U choose: " << userInput << endl;
+	temp=cards.select(userInput);
 	return 0;
 }
 
 void prtTable(Deck& cards){
-	system ("CLS");
-	cout << "Computer Hand:" << cards.getCPU() << "\nPile:" << cards.getPile() << "\t Trump Card:"<< endl;
+	cout << "Computer Hand:" << cards.getCPU() << "\nPile:" << cards.getPile() << "\t Trump Card:";
+	cards.getTrumpCard();
+	cout << endl;
 	cards.prtHand();
+	cout << endl;
 }
